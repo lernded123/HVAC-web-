@@ -1,5 +1,5 @@
 ---
-
+import extra from "../assets/images/hvac/extra.jpg"
 ---
 
 <!-- ============================================ -->
@@ -13,23 +13,23 @@
         <picture class="cs-picture cs-picture1">
           <source
             media="(max-width: 600px)"
-            srcset="/assets/images/construction-m.jpg"
+            srcset={extra.src}
           />
           <source
             media="(min-width: 601px)"
-            srcset="/assets/images/construction.jpg"
+            srcset={extra.src}
           />
           <img
             aria-hidden="true"
             decoding="async"
-            src="/assets/images/construction.jpg"
+            srcset={extra.src}
             alt="house"
             loading="lazy"
             width="400"
             height="560"
           />
         </picture>
-        <picture class="cs-picture cs-picture2">
+        <!-- <picture class="cs-picture cs-picture2">
           <source
             media="(max-width: 600px)"
             srcset="/assets/images/cabinets2-m.jpg"
@@ -47,7 +47,7 @@
             width="400"
             height="560"
           />
-        </picture>
+        </picture> -->
       </div>
       <!-- Right Content Section-->
       <div class="cs-right">
