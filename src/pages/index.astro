@@ -1,0 +1,61 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+import Hero from "@components/Hero.astro";
+import Services from "@components/Services.astro"
+import About from "@components/About.astro"
+// import CTA from "@components/CTA.astro";
+---
+
+<BaseLayout
+  title="HVAC website"
+  description="Meta description for the page"
+  preloadImg={import("../assets/images/hvac/landing.jpg")}
+>
+  <!-- ============================================ -->
+  <!--                    Hero                      -->
+  <!-- ============================================ -->
+
+ <Hero />
+
+   
+  <!-- ============================================ -->
+  <!--                  Services                    -->
+  <!-- ============================================ -->
+
+  <Services />
+
+
+  <!-- ============================================ -->
+  <!--                 Side By Side                 -->
+  <!-- ============================================ -->
+
+  <About />
+
+  <!-- ============================================ -->
+  <!--            Extra Content To Rank             -->
+  <!-- ============================================ -->
+
+  <section id="sbs-r">
+   
+  </section>
+
+  <!-- ============================================ -->
+  <!--                   Gallery                    -->
+  <!-- ============================================ -->
+
+  <section id="gallery">
+    
+  </section>
+
+  <!-- ============================================ -->
+  <!--                   Reviews                    -->
+  <!-- ============================================ -->
+
+  <section id="reviews">
+  
+  </section>
+
+  <!-- <CTA /> -->
+</BaseLayout>
+
+
