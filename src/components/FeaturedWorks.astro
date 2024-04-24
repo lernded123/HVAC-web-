@@ -6,7 +6,7 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
 
 <section id="gallery">
     <div class="cs-container">
-        <h2>Featured Works</h2>
+        <h2 class="cs-title">Featured Works</h2>
       <div class="cs-image-group">
         <!-- Row 1-->
         <div class="cs-row cs-row-1">
@@ -29,11 +29,50 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
               height="560"
             />
           </picture>
+          <div class="cs-row cs-row-2">
+            <picture class="cs-picture cs-picture1">
+              <source
+                media="(max-width: 600px)"
+                srcset={extra.src}
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset={extra.src}
+              />
+              <img
+                aria-hidden="true"
+                decoding="async"
+                srcset={extra.src}
+                alt="new kitchen"
+                loading="lazy"
+                width="400"
+                height="560"
+              />
+            </picture>
+            <picture class="cs-picture cs-picture1">
+              <source
+                media="(max-width: 600px)"
+                srcset={gallery3.src}
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset={gallery3.src}
+              />
+              <img
+                aria-hidden="true"
+                decoding="async"
+                srcset={gallery3.src}
+                alt="new kitchen"
+                loading="lazy"
+                width="400"
+                height="560"
+              />
+            </picture>
           
           <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
         </div>
         <!-- Row 2 -->
-        <div class="cs-row cs-row-2">
+        <!-- <div class="cs-row cs-row-2">
           <picture class="cs-picture cs-picture1">
             <source
               media="(max-width: 600px)"
@@ -54,10 +93,10 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
             />
           </picture>
           
-          <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-         </div>
+           To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+         <!-- </div> -->
         <!-- Row 3 --> 
-       <div class="cs-row cs-row-3">
+       <!-- <div class="cs-row cs-row-3">
           <picture class="cs-picture cs-picture1">
             <source
               media="(max-width: 600px)"
@@ -77,13 +116,14 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
               height="560"
             />
           </picture>
-          
+           -->
 
           <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout -->
-        </div> 
+        <!-- </div>   -->
       </div>
-      <a href="/contact" class="cs-button-solid">Get Free Quote</a>
+      <!-- <a href="/contact" class="cs-button-solid">Get Free Quote</a> -->
     </div>
+    <a href="/contact" class="cs-button-solid">Get Free Quote</a>
   </section>
 
   <style lang="less">
@@ -106,6 +146,10 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
           width: 100%;
           max-width: (1322/16em);
           margin: auto;
+          background-color: rgb(248, 246, 246);
+          padding: 6rem ;
+          // display: flex;
+          // flex-direction: column;
         }
   
         .cs-image-group {
@@ -116,15 +160,15 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
           margin: 0 auto (60/16rem);
           padding: 0;
           display: flex;
-          justify-content: center;
-          align-items: flex-start;
+          // justify-content: center;
+          flex-direction: row;
           gap: (30/16em);
         }
   
         .cs-row {
           display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
+          flex-direction: row;
+          justify-content: center;
           align-items: center;
           gap: (30/16em);
         }
@@ -144,12 +188,12 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
   
         .cs-row-1 {
           .cs-picture1 {
-            width: (280/16em);
-            height: (320/16em);
+            width: (320/16em);
+            height: (280/16em);
           }
   
           .cs-picture2 {
-            width: (280/16em);
+            width: (360/16em);
             height: (320/16em);
           }
   
@@ -161,12 +205,12 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
   
         .cs-row-2 {
           .cs-picture1 {
-            width: (280/16em);
-            height: (320/16em);
+            width: (360/16em);
+            height: (280/16em);
           }
   
           .cs-picture2 {
-            width: (280/16em);
+            width: (360/16em);
             height: (320/16em);
           }
   
@@ -178,8 +222,8 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
   
         .cs-row-3 {
           .cs-picture1 {
-            width: (290/16em);
-            height: (320/16em);
+            width: (360/16em);
+            height: (280/16em);
           }
   
           .cs-picture2 {
@@ -194,4 +238,16 @@ import gallery3 from "../assets/images/hvac/gallery3.jpg"
         }
       }
     }
+
+    /* Desktop Parallax Effect - 1300px */
+  @media only screen and (min-width: 50em) {
+    .cs-row {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          gap: (30/16em);
+        }
+
+  }
   </style>
